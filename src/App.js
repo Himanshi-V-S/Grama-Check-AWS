@@ -5,6 +5,7 @@ import './App.css';
 import Apply from './pages/Apply';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Signup from "./pages/Signup"
+import ApplyPoliceReport from "./pages/ApplyPoliceReport"
 import Header from './components/Header';
 import Signin from './pages/Signin';
 
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/apply" element={<Apply />}></Route>
+          <Route path="/applyPoliceReport" element={<ApplyPoliceReport />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/signin" element={<Signin />}></Route>
         </Routes>

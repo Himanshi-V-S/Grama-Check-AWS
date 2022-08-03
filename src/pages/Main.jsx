@@ -9,6 +9,10 @@ function Main() {
     navigate('/apply')
   }
 
+  const routeToPoliceReport = () => {
+    navigate('/applyPoliceReport')
+  }
+
   //To show and hide status
   const [show,setShow] = useState(false);
 
@@ -25,7 +29,9 @@ function Main() {
         <Heading/>
 
         <div className='menu'>
-            <button className='applybtn btn' onClick={routeToApply}>Apply for Grama Certificate</button>
+            <button className='gramabtn btn' onClick={routeToApply}>Apply for Grama Certificate</button>
+            <br/>
+            <button className='policebtn btn' onClick={routeToPoliceReport}>Apply for Police Clearance Report</button>
             <br/>
             <button className='statusbtn btn' onClick={showStatus}>Check Status</button>
         </div>

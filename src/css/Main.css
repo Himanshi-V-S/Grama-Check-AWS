@@ -23,17 +23,26 @@
     
 }
 
-.applybtn{
+.gramabtn{
     background-color: #51B6FF;
 }
 
-.applybtn:hover{
+.gramabtn:hover{
     background-color: #209ffa;
+}
+
+.policebtn{
+    background-color: #0c47ad;
+    margin-top: 15px;
+}
+
+.policebtn:hover{
+    background-color: #216beb;
 }
 
 .statusbtn{
     background-color: #A4B2C7;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .statusbtn:hover{
