@@ -1,0 +1,33 @@
+.signinBtn{
+    background-color: #51B6FF;
+    color: white;
+    width: 12%;
+    height: 6.5vh;
+    font-size: 25px;
+    font-weight: bold;
+    border: #4992FF;
+    border-radius: 15px;
+    margin-left:44%;
+    margin-top: 2%;
+    
+}
+.signinBtn:hover{
+    background-color: #209ffa;
+}
+.textOne{
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    
+}
+.signupText{
+    text-align: center;
+    margin-top: 1%;
+    color: #51B6FF;
+}
+.signupText:hover{
+   color: #209ffa;
+}
+.buttons{
+    margin-top: 34%;
+}

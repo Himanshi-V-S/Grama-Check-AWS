@@ -1,0 +1,62 @@
+*{
+    background-color: #E2FDFF;
+}
+
+.mainHeading{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 80px;
+}
+
+.menu{
+    margin-top: 150px;
+    text-align: center;
+    
+}
+
+.btn{
+    border-radius: 10px;
+    padding: 20px;
+    width: 25%;
+    color: white;
+    font-size: 18px;
+    
+}
+
+.gramabtn{
+    background-color: #51B6FF;
+}
+
+.gramabtn:hover{
+    background-color: #209ffa;
+}
+
+.policebtn{
+    background-color: #0c47ad;
+    margin-top: 15px;
+}
+
+.policebtn:hover{
+    background-color: #216beb;
+}
+
+.statusbtn{
+    background-color: #A4B2C7;
+    margin-top: 25px;
+}
+
+.statusbtn:hover{
+    background-color: #768499;
+}
+
+.status{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #ffe6e6;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+
