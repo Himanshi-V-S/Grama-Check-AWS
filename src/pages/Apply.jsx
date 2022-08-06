@@ -25,7 +25,9 @@ class Form extends React.Component {
       gramaApplicant: {
         nic: props.nic,
         address: props.address
-      }
+      },
+
+      nicValidation: props.nicValidation
     }
   }
 
@@ -38,7 +40,6 @@ class Form extends React.Component {
   
     // Update the gramaApplicant object's  nic
     gramaApplicant.nic = modifiedValue;
-  
   
     // Update the state object
     this.setState({
@@ -70,8 +71,30 @@ class Form extends React.Component {
     var nic = this.state.gramaApplicant.nic;
     var address = this.state.gramaApplicant.address;
 
-    invokeIdentityApi(nic);
+    this.invokeIdentityApi(nic);
   }
+
+
+  invokeIdentityApi(nic){
+    // var testNic = '123456789V';
+    // const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/submittedinfo?nic=$testNic&client_id=ASI3DoYAWS6HCEiZypwYt3StLwUnFs366Ga5Jvfm";
+
+    //Test invoke url
+    const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/submittedinfo?nic=1234&client_id=ASI3DoYAWS6HCEiZypwYt3StLwUnFs366Ga5Jvfm";
+
+    fetch(requestURL)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      console.log(data.validation);
+      
+      this.setState({
+        nicValidation: data.validation
+      });
+    })
+
+  }
+
 
   render() {
     return (
@@ -80,6 +103,9 @@ class Form extends React.Component {
           NIC:
           <input type="text" className='nicTxtBox' value={this.state.gramaApplicant.nic} onChange={this.handleNicChanged.bind(this)}/>
         </label>
+
+        <br/>
+        <label className='nicValidation'>{this.state.nicValidation}</label>
 
         <br/>
 
@@ -109,28 +135,6 @@ class Form extends React.Component {
  }
 
 
- function invokeIdentityApi(nic) {
-  // const testNic = '12345678V';
-
-  const testNic = nic;
-
-  console.log("test:", nic);
-
-  require('dotenv').config()
-  console.log(process.env);
-
-  const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/submittedinfo?nic=testNic&client_id=process.env.IDENTITY_API";
-
-  fetch(requestURL)
-  .then((response) => {
-    console.log(response);
-    // const myObj = JSON.parse(response.json);
-    // console.log(myObj.message);
-  })
-  .catch((error) => {
-    console.log(error);
-  })
-  // .then( response => response.json())
- }
+ 
 
 export default Apply
