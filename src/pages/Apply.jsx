@@ -27,7 +27,8 @@ class Form extends React.Component {
         address: props.address
       },
 
-      nicValidation: props.nicValidation
+      nicValidation: props.nicValidation,
+      addressValidation: props.addressValidation
     }
   }
 
@@ -72,24 +73,42 @@ class Form extends React.Component {
     var address = this.state.gramaApplicant.address;
 
     this.invokeIdentityApi(nic);
+    this.invokeAddressCheckApi(nic, address);
   }
 
 
   invokeIdentityApi(nic){
-    // var testNic = '123456789V';
-    // const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/submittedinfo?nic=$testNic&client_id=ASI3DoYAWS6HCEiZypwYt3StLwUnFs366Ga5Jvfm";
-
-    //Test invoke url
-    const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/submittedinfo?nic=1234&client_id=ASI3DoYAWS6HCEiZypwYt3StLwUnFs366Ga5Jvfm";
+    // var testNic = '970852414V';
+    
+    const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/applicantinfo?nic=" + nic + "&client_id=ASI3DoYAWS6HCEiZypwYt3StLwUnFs366Ga5Jvfm";
 
     fetch(requestURL)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      console.log(data.validation);
+      console.log(data.status);
       
       this.setState({
-        nicValidation: data.validation
+        nicValidation: data.status
+      });
+    })
+
+  }
+
+  invokeAddressCheckApi(nic, address){
+    // var testNic = '970852414V';
+    // var testAddress = 'No 12, nawala road, kotte';
+    
+    const requestURL = "https://tnk36i6qb1.execute-api.us-east-1.amazonaws.com/addresscheckStage/addresscheck?nic=" + nic + "&address=" + address + "&client_id=JZbsreUvgdagqagyrv10i6blT27DacpW2PLeGuA0";
+
+    fetch(requestURL)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      console.log(data.status);
+      
+      this.setState({
+        addressValidation: data.status
       });
     })
 
@@ -105,7 +124,7 @@ class Form extends React.Component {
         </label>
 
         <br/>
-        <label className='nicValidation'>{this.state.nicValidation}</label>
+        <label className='validationtxt'>{this.state.nicValidation}</label>
 
         <br/>
 
@@ -113,6 +132,9 @@ class Form extends React.Component {
           Address:
           <textarea className='addressTxtBox' value={this.state.gramaApplicant.address} onChange={this.handleAddressChanged.bind(this)}/>
         </label>
+
+        <br/>
+        <label className='validationtxt'>{this.state.addressValidation}</label>
 
         <br/>
 
