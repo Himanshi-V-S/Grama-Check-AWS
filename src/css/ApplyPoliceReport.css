@@ -48,11 +48,13 @@
     width: 40%;
 }
 
-.applyBtn{
+.verifyBtn{
     background-color: #51B6FF;
+    margin-left: 10%;
+    border-radius: 10px;
 }
 
-.applyBtn:hover{
+.verifyBtn:hover{
     background-color: #209ffa;
 }
 
@@ -60,10 +62,30 @@
     margin-left: 15px;
     background-color: #A4B2C7;
     margin-top: 15px;
+    border-radius: 10px;
 }
 
 .resetBtn:hover{
     background-color: #768499;
+}
+
+.applySection{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.applyPRBtn{
+    margin-left: 15px;
+    background-color: #2337ad;
+    color: white;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.applyPRBtn:hover{
+    background-color: #384dc9;
 }
 
 .policeApplyFormContainer{

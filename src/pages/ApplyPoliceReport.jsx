@@ -91,13 +91,10 @@ class Form extends React.Component {
         </label>
 
         <br/>
-        <label className='validationtxt'>{this.state.policeClearance}</label>
-
-        <br/>
 
         <label  className='labels'>
           Criminal Report Status :
-          <input type="text" disabled className='filebox'/>
+          <input type="text" disabled className='filebox' value={this.state.policeClearance}/>
         </label>
 
         <br/>
@@ -106,9 +103,14 @@ class Form extends React.Component {
         <br/>
 
         <div className='btnPanel'>
-          {/* Create and add a function when apply btn is clicked  */}
-          <input type="button" value="Apply" className='applyBtn btn' onClick={this.handleBtnClicked.bind(this)}/>  
+          <input type="button" value="Verify" className='verifyBtn btn' onClick={this.handleBtnClicked.bind(this)}/>  
           <input type="reset" value="Reset" className='resetBtn btn'/>
+        </div>
+
+        <br/>
+
+        <div className='applySection'>
+          <input type="button" value="Apply" className='applyPRBtn btn' />
         </div>
     
         </form>

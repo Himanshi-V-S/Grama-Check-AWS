@@ -36,7 +36,8 @@ class Form extends React.Component {
       },
 
       nicValidation: props.nicValidation,
-      addressValidation: props.addressValidation
+      addressValidation: props.addressValidation,
+
     }
   }
 
@@ -84,6 +85,10 @@ class Form extends React.Component {
     this.invokeAddressCheckApi(nic, address);
   }
 
+  handleApplyBtnClicked(){
+    
+  }
+
 
   invokeIdentityApi(nic){
     // var testNic = '970852414V';
@@ -118,6 +123,7 @@ class Form extends React.Component {
       this.setState({
         addressValidation: data.status
       });
+
     })
 
   }
@@ -156,11 +162,16 @@ class Form extends React.Component {
         <br/>
 
         <div className='btnPanel'>
-          {/* Create and add a function when apply btn is clicked  */}
-          <input type="button" value="Apply" className='applyBtn btn' onClick={this.handleBtnClicked.bind(this)}/>  
+          <input type="button" value="Verify" className='verifyBtn btn' onClick={this.handleBtnClicked.bind(this)}/>  
           <input type="reset" value="Reset" className='resetBtn btn'/>
         </div>
-    
+
+        <br/>
+
+        <div className='applySection'>
+          <input type="button" value="Apply" className='applyGramaBtn btn' onClick={this.handleApplyBtnClicked.bind(this)}/>
+        </div>
+
         </form>
       </div>
       
