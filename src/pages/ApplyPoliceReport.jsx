@@ -1,9 +1,14 @@
 import React from 'react'
 import '../css/ApplyPoliceReport.css'
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 function Apply() {
   return (
     <div>
+        <div className='header'>
+            <Header/>
+        </div>
         <div className='formHeading'>
             Police clearance report application form
         </div>
@@ -11,7 +16,9 @@ function Apply() {
         <div className='formbody'>
           <Form/>
         </div>
-
+        <div className='footer'>
+            <Footer/>
+        </div>
     </div>
   )
 }
@@ -23,17 +30,18 @@ class Form extends React.Component {
   
   render() {
     return (
-      <form>
-        <label>
+      <div className='policeApplyFormContainer'>
+      <form className="policeApplyForm">
+        <label className='labels'>
           NIC:
           <input type="text" className='nicTxtBox'/>
         </label>
 
         <br/>
 
-        <label >
-          Grama certificate:
-          <input type="file" className='filebox'/>
+        <label  className='labels'>
+          Criminal Report Status :
+          <input type="text" disabled className='filebox'/>
         </label>
 
         <br/>
@@ -45,6 +53,8 @@ class Form extends React.Component {
         </div>
     
         </form>
+      </div>
+      
     );
   }
  }

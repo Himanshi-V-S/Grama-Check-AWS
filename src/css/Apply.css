@@ -16,23 +16,26 @@
     padding: 10px;
     width: 350px;
     font-size: 16px;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .validationtxt{
     justify-content: center;
     font-size: 12px;
     color: red;
-    margin-left: 35%;
+    margin-left: 50%;
+    background-color: white;
 }
 
 .addressTxtBox{
     margin-top: 20px;
-    margin-left: 130px;
+    margin-left: 180px;
     width: 360px;
-    height: 150px;
-    
+    height: 40px;
+    background-color: white;
 }
-
+/* 
 .filebox{
     margin-top: 20px;
     margin-left: 50px;
@@ -41,21 +44,25 @@
     height: 250px;
     text-align: center;
     padding: 10px;
-}
+} */
 
 .btnPanel{
-    margin-top: 20px;
+    margin-top: 0px;
     width: 100%;
+    background-color: white;
 }
 
 .btn{
     padding: 10px;
     font-size: 14px;
     width: 40%;
+    border: white;
 }
 
 .applyBtn{
     background-color: #51B6FF;
+    margin-left: 10%;
+    border-radius: 10px;
 }
 
 .applyBtn:hover{
@@ -66,9 +73,26 @@
     margin-left: 15px;
     background-color: #A4B2C7;
     margin-top: 15px;
+    border-radius: 10px;
 }
 
 .resetBtn:hover{
     background-color: #768499;
 }
 
+.gramaApplyForm{
+    background-color:white;
+    margin-top: 5%;
+    padding-top: 0px;
+}
+.gramaApplyFormContainer{
+    background-color: white;
+    width: 45%;
+    height: 50vh;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.labels{
+    margin-left: 15%;
+    background-color: white;
+}

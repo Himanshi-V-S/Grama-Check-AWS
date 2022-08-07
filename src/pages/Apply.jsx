@@ -1,16 +1,24 @@
 import React from 'react'
 import '../css/Apply.css'
+import Header from "../components/Header"
 import {useState} from 'react';
+import Footer from "../components/Footer"
 
 const Apply = () => {
     return (
     <div>
+        <div className='header'>
+            <Header/>
+        </div>
         <div className='formHeading'>
             Grama certificate application form
         </div>
 
         <div className='formbody'>
           <Form/>
+        </div>
+        <div className='footer'>
+            <Footer/>
         </div>
 
     </div>
@@ -117,8 +125,10 @@ class Form extends React.Component {
 
   render() {
     return (
-      <form>
-        <label>
+      <div className='gramaApplyFormContainer'>
+        <form  className='gramaApplyForm'>
+          
+        <label className='labels'>
           NIC:
           <input type="text" className='nicTxtBox' value={this.state.gramaApplicant.nic} onChange={this.handleNicChanged.bind(this)}/>
         </label>
@@ -128,7 +138,7 @@ class Form extends React.Component {
 
         <br/>
 
-        <label>
+        <label className='labels'>
           Address:
           <textarea className='addressTxtBox' value={this.state.gramaApplicant.address} onChange={this.handleAddressChanged.bind(this)}/>
         </label>
@@ -138,10 +148,10 @@ class Form extends React.Component {
 
         <br/>
 
-        <label >
+        {/* <label >
           Proof of Residence:
           <input type="file" className='filebox'/>
-        </label>
+        </label> */}
 
         <br/>
 
@@ -152,6 +162,8 @@ class Form extends React.Component {
         </div>
     
         </form>
+      </div>
+      
     );
   }
  }
