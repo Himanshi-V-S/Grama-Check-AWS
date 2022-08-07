@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import '../css/Main.css';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
+import Header from "../components/Header"
+import Footer from '../components/Footer';
 
 function Main() {
   const navigate = useNavigate();
@@ -26,19 +28,27 @@ function Main() {
 
     return (
       <div>
+        <div className='header'>
+            <Header/>
+          </div>
         <Heading/>
 
         <div className='menu'>
-            <button className='gramabtn btn' onClick={routeToApply}>Apply for Grama Certificate</button>
+            <button className='gramabtn' onClick={routeToApply}>Apply for Grama Certificate</button>
             <br/>
-            <button className='policebtn btn' onClick={routeToPoliceReport}>Apply for Police Clearance Report</button>
+            <button className='policebtn' onClick={routeToPoliceReport}>Apply for Police Clearance Report</button>
             <br/>
-            <button className='statusbtn btn' onClick={showStatus}>Check Status</button>
+            <hr className='divider'/>
+            <button className='statusbtn' onClick={showStatus}>Check Status</button>
         </div>
 
         {
           show?<p className='status'>Status: {statusMessage}</p>:null
         }
+
+          <div className='footer'>
+                <Footer/>
+          </div>
       </div>
     );
   }

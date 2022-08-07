@@ -3,18 +3,19 @@
 }
 
 .appName{
-    margin-left: 40px;
-    font-size: 30px;
+    margin-left: 2%;
+    height: 60px;
+    width: 130px;
 }
 
 .userIcon{
-    margin-left: 1500px;
-    width: 30px;
-    height: 30px;
+    margin-left: 85%;
+    width: 40px;
+    height: 40px;
 }
 
 .notifyIcon{
-    margin-left: 30px;
-    width: 32px;
-    height: 32px;
+    margin-left: 1%;
+    width: 42px;
+    height: 42px;
 }

@@ -1,19 +1,23 @@
 *{
-    background-color: #E2FDFF;
+    background-color: #5ca0e3;
 }
 
 .mainHeading{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 2%;
     font-size: 80px;
 }
 
 .menu{
-    margin-top: 150px;
+    border-radius: 20px;
     text-align: center;
-    
+    background-color: white;
+    width: 40%;
+    height: 45vh;
+    margin-left: 30%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
+/* 
 .btn{
     border-radius: 10px;
     padding: 20px;
@@ -21,10 +25,20 @@
     color: white;
     font-size: 18px;
     
-}
+} */
 
 .gramabtn{
+    
     background-color: #51B6FF;
+    color: white;
+    width: 80%;
+    height: 6.5vh;
+    font-size: 25px;
+    font-weight: bold;
+    border: #4992FF;
+    border-radius: 15px;
+    margin-left:0%;
+    margin-top: 7%;
 }
 
 .gramabtn:hover{
@@ -32,17 +46,36 @@
 }
 
 .policebtn{
-    background-color: #0c47ad;
-    margin-top: 15px;
+    background-color: #51B6FF;
+    color: white;
+    width: 80%;
+    height: 6.5vh;
+    font-size: 25px;
+    font-weight: bold;
+    border: #4992FF;
+    border-radius: 15px;
+    margin-left:0%;
+    margin-top: 7%;
 }
 
 .policebtn:hover{
     background-color: #216beb;
 }
-
+.divider{
+    margin-top: 6%;
+    width: 90%;
+}
 .statusbtn{
-    background-color: #A4B2C7;
-    margin-top: 25px;
+    background-color: #51B6FF;
+    color: white;
+    width: 80%;
+    height: 6.5vh;
+    font-size: 25px;
+    font-weight: bold;
+    border: #4992FF;
+    border-radius: 15px;
+    margin-left:0%;
+    margin-top: 7%;
 }
 
 .statusbtn:hover{

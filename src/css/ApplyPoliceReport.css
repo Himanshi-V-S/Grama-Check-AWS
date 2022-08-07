@@ -9,10 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .nicTxtBox{
-    margin-left: 160px;
+    margin-left: 220px;
     padding: 10px;
     width: 350px;
     font-size: 16px;
@@ -20,12 +21,13 @@
 
 .filebox{
     margin-top: 20px;
-    margin-left: 60px;
+    margin-left: 45px;
     border: 1px solid grey;
     width: 350px;
-    height: 100px;
+    height: 25px;
     text-align: center;
     padding: 10px;
+    background-color: white;
 }
 
 .validationtxt{
@@ -64,3 +66,20 @@
     background-color: #768499;
 }
 
+.policeApplyFormContainer{
+    background-color: white;
+    width: 45%;
+    height: 50vh;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.policeApplyForm{
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+.criminalStatus{
+    width: 200px;
+    height:5vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
