@@ -1,21 +1,43 @@
 *{
-    margin-top: 4px;
+    margin-top: 0px;
 }
-
+.navBar{
+    width: 100%;
+    height: 7vh;
+    background-color: pink;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    margin-bottom: 0%;
+}
+.navBarLogo{
+    padding-top: 3vh
+}
+.naveBarButtons{
+    padding-top: 3vh;
+    padding-left: 70%;
+}
 .appName{
-    margin-left: 2%;
-    height: 60px;
+    margin-left: 4%;
+    height: 7vh;
     width: 130px;
+    
 }
 
-.userIcon{
-    margin-left: 85%;
-    width: 40px;
-    height: 40px;
+.navButton{
+    background-color: white;
+    color: #0075dc;
+    /* background-color: black;
+    color: white; */
+    width: 60%;
+    height: 6.5vh;
+    font-size: 25px;
+    font-weight: bold;
+    border: #4992FF;
+    border-radius: 50px;
+    margin-left:20%;
+    margin-top: 0%;
 }
-
-.notifyIcon{
-    margin-left: 1%;
-    width: 42px;
-    height: 42px;
+.navButton:hover{
+    background-color: rgb(242, 242, 242);
+    color: #209ffa;
 }
