@@ -4,6 +4,7 @@
   "homepage": "https://Himanshi-V-S.github.io/",
   "private": true,
   "dependencies": {
+    "@asgardeo/auth-react": "^1.1.15",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
