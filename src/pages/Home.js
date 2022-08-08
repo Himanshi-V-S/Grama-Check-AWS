@@ -24,6 +24,7 @@ function Home(){
                 </div>
                 <div className="loginContainer">
                     <div className="logoContainer">
+                        <h1 className="greeting">Welcome to GramaCheck!</h1>
                         <img className="logoImage" src={logo} alt="Logo" />
                     </div>
                     <div className="buttons">
