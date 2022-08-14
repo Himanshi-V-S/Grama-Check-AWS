@@ -8,11 +8,11 @@ ReactDOM.render(
   <React.StrictMode>
   <AuthProvider
   config={ {
-    signInRedirectURL: "http://gramacheck.s3-website-us-east-1.amazonaws.com/main",
-            signOutRedirectURL: "http://gramacheck.s3-website-us-east-1.amazonaws.com/main",
-            clientID: "rgfykPFL3gb_U3sJL1jIzKJbfRMa",
-            baseUrl: "https://api.asgardeo.io/t/awsgramacheck",
-            scope: [ "openid","profile" ]
+      signInRedirectURL: "https://d1lidqfrgb5glk.cloudfront.net/main",
+      signOutRedirectURL: "https://d1lidqfrgb5glk.cloudfront.net",
+      clientID: "rgfykPFL3gb_U3sJL1jIzKJbfRMa",
+      baseUrl: "https://api.asgardeo.io/t/awsgramacheck",
+      scope: [ "openid","profile" ]        
   } }
   >
   <App />
