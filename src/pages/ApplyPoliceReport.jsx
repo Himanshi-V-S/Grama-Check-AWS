@@ -10,7 +10,7 @@ function Apply() {
             <Header/>
         </div>
         <div className='formHeading'>
-            Police clearance report application form
+            Police Clearance Report Application Form
         </div>
 
         <div className='formbody'>
@@ -60,7 +60,14 @@ class Form extends React.Component {
 
     this.invokePoliceCheckApi(nic);
   }
-
+  handleReset = e => {
+    this.setState({  policeReportApplicant:{
+      nic:""
+    },
+      gramaValidation: "",
+      policeClearance:""
+  })
+  }
   invokePoliceCheckApi(nic){
     // var testNic = '970852414V';
     
@@ -104,7 +111,7 @@ class Form extends React.Component {
 
         <div className='btnPanel'>
           <input type="button" value="Verify" className='verifyBtn btn' onClick={this.handleBtnClicked.bind(this)}/>  
-          <input type="reset" value="Reset" className='resetBtn btn'/>
+          <input type="button" value="Reset" className='resetBtn btn' onClick={this.handleReset}/>
         </div>
 
         <br/>

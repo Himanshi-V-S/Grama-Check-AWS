@@ -22,7 +22,7 @@
 .filebox{
     margin-top: 20px;
     margin-left: 45px;
-    border: 1px solid grey;
+    border: none;
     width: 350px;
     height: 25px;
     text-align: center;
