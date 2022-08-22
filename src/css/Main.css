@@ -5,7 +5,9 @@
 .mainHeading{
     text-align: center;
     margin-top: 2%;
-    font-size: 80px;
+    padding-top: 3%;
+    font-size: calc(1rem + 3vw);
+    
 }
 
 .menu{
@@ -32,8 +34,9 @@
     background-color: #51B6FF;
     color: white;
     width: 80%;
-    height: 6.5vh;
-    font-size: 25px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: calc(1rem + 0.4vw);
     font-weight: bold;
     border: #4992FF;
     border-radius: 15px;
@@ -49,13 +52,14 @@
     background-color: #51B6FF;
     color: white;
     width: 80%;
-    height: 6.5vh;
-    font-size: 25px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: calc(1rem + 0.4vw);
     font-weight: bold;
     border: #4992FF;
     border-radius: 15px;
     margin-left:0%;
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
 .policebtn:hover{
@@ -69,13 +73,14 @@
     background-color: #51B6FF;
     color: white;
     width: 80%;
-    height: 6.5vh;
-    font-size: 25px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: calc(1rem + 0.4vw);
     font-weight: bold;
     border: #4992FF;
     border-radius: 15px;
     margin-left:0%;
-    margin-top: 7%;
+    margin-top: 4%;
 }
 
 .statusbtn:hover{
@@ -89,7 +94,27 @@
     background-color: #ffe6e6;
     padding-top: 50px;
     padding-bottom: 50px;
+    width: 100%;
+    margin-right: 0%;
+    
 }
 
 
 
+@media (max-width:900px){
+    .menu{
+        border-radius: 20px;
+        text-align: center;
+        background-color: white;
+        width: 70%;
+        height: 40vh;
+        margin-left: 15%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .mainHeading{
+        margin-top: 8%;
+        font-size: calc(1rem + 1.3vw);
+        padding-top: 5%;
+        
+    }
+}

@@ -5,34 +5,38 @@
     background-color: white;
     display: grid;
     grid-template: 1fr/1fr 1fr;
-    margin-left: 20%;
+    margin:0 auto;
     margin-top: 5%;
     border-radius: 20px;
+
 }
 .homeImage{
-    width: 500px;
-    height: 500px;
-    
+   width: 90%;
+  
+   
 }
 .homeImageContainer{
     background-color: white;
-    margin: 0%;
-    padding-left: 5%;
-    padding-top: 15%;
     border-radius: 20px 0px 0px 20px;
+    /* width: 50%; */
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .logoContainer{
     margin-top: 0%;
     background-color: white;
-    width: 90%;
-    margin-left: 5%;
-    
+    border-radius: 0px 20px 0px 0px;
 }
 .loginContainer{
     display: grid;
     grid-template: 4fr 1fr / 1fr;
     border-radius: 0px 20px 20px 0px;
     background-color: white;
+    /* width: 50%; */
+    height: 100%;
 }
 .logoImage{
     width: 70%;
@@ -88,5 +92,5 @@
     text-align: center;
     margin-top: 15%;
     background: white;
-    font-size: 38px;
+    font-size: calc(1rem + 0.9vw);
 }

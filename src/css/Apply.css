@@ -100,14 +100,14 @@
 }
 
 .gramaApplyForm{
-    background-color:white;
+    background-color:rgb(140, 75, 75);
     margin-top: 5%;
     padding-top: 0px;
 }
 .gramaApplyFormContainer{
     background-color: white;
     width: 45%;
-    height: 50vh;
+    padding-bottom: 4%;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
