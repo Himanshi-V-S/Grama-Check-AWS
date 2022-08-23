@@ -94,3 +94,6 @@
     background: white;
     font-size: calc(1rem + 0.9vw);
 }
+.signupLink{
+    text-decoration: none;
+}
