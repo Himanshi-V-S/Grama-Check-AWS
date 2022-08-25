@@ -12,19 +12,21 @@
 }
 
 .nicTxtBox{
-    margin-left: 160px;
+    /* margin-left: 160px;
     padding: 10px;
     width: 350px;
     font-size: 16px;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid black; */
 }
 
 .validationtxt{
+    display: flex;
+    align-items: center;
     justify-content: center;
     font-size: 12px;
     color: red;
-    margin-left: 50%;
+   
     background-color: white;
 }
 
@@ -46,72 +48,133 @@
     padding: 10px;
 } */
 
-.btnPanel{
+/* .btnPanel{
     margin-top: 0px;
     width: 100%;
     background-color: white;
-}
+} */
 
-.btn{
-    padding: 10px;
-    font-size: 14px;
-    width: 40%;
-    border: white;
-}
-
-.verifyBtn{
-    background-color: #51B6FF;
+.button{
+    width: 80%;
     margin-left: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.verifyButton{
+    background-color: #51B6FF;
+    border: white;
     border-radius: 10px;
 }
 
-.verifyBtn:hover{
+.verifyButton:hover{
     background-color: #209ffa;
 }
 
-.resetBtn{
-    margin-left: 15px;
+.resetButton{
+    
     background-color: #A4B2C7;
-    margin-top: 15px;
+    border: white;
     border-radius: 10px;
 }
 
-.resetBtn:hover{
+.resetButton:hover{
     background-color: #768499;
 }
 
-.applySection{
+/* .applySection{
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.applyGramaBtn{
-    margin-left: 15px;
+.applyGramaButton{
+   
     background-color: #2337ad;
     color: white;
-    margin-top: 15px;
+    border: white;
     border-radius: 10px;
 }
 
-.applyGramaBtn:hover{
+.applyGramaButton:hover{
     background-color: #384dc9;
 }
 
 .gramaApplyForm{
-    background-color:rgb(140, 75, 75);
+    background-color:white;
     margin-top: 5%;
     padding-top: 0px;
+    display: grid;
+    grid-template: 2fr 1fr 2fr 1fr 4fr/ 1fr;
+}
+.firstRaw{
+    background-color:white;
+    display: grid;
+    grid-template: 1fr/ 1fr 2fr;
+}
+.nicLabelDiv{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.nicLabel{
+    background-color: white;
+}
+.nicTextDiv{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nicInput{
+    width: 70%;
+    border: 1px solid black;
+    background-color: white;
+}
+.secondRaw{
+    border: none;
+    display: grid;
+    grid-template: 1fr/ 1fr 2fr;
+    background-color: white;
+}
+.addressLabelDiv{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: white;
+}
+.addressLabel{
+    background-color: white;
+}
+.addressInputDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.addressInput{
+    width:70%;
+    border: 1px solid black;
+    background-color: white;
+}
+.thirdRaw{
+    padding-top: 5%;
+    padding-bottom: 3%;
+    background-color: white;
+    display:grid;
+    grid-template: 1fr/ 1fr 1fr 1fr;
 }
 .gramaApplyFormContainer{
     background-color: white;
-    width: 45%;
+    width: 70%;
     padding-bottom: 4%;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.labels{
-    margin-left: 15%;
-    background-color: white;
 }

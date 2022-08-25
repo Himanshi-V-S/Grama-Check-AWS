@@ -11,7 +11,7 @@ const Apply = () => {
         <Header />
       </div>
       <div className='formHeading'>
-        Grama certificate application form
+        Grama Certificate Application Form
       </div>
 
       <div className='formbody'>
@@ -142,44 +142,69 @@ class Form extends React.Component {
     return (
       <div className='gramaApplyFormContainer'>
         <form className='gramaApplyForm'>
+          <div className='firstRaw'>
+            <div className='nicLabelDiv'>
+              <label className='nicLabel'>
+                NIC:
+              </label>
+            </div>
+            <div className='nicTextDiv'>
+              <input className='nicInput' type="text" value={this.state.gramaApplicant.nic} onChange={this.handleNicChanged.bind(this)} />
+              
+            </div>
+          </div>
+          <label className='validationtxt'>{this.state.nicValidation}</label>
+          <div className='secondRaw'>
+            <div className='addressLabelDiv'>
+              <label className='addressLabel'>
+                Address:
+              </label>
+            </div>
+            <div className='addressInputDiv'>
+              <input className='addressInput' value={this.state.gramaApplicant.address} onChange={this.handleAddressChanged.bind(this)} />
+            </div>
+          </div>
+          <label className='validationtxt'>{this.state.addressValidation}</label>
+          <div className='thirdRaw'>
+          <input type="button" value="Verify" className='verifyButton button' onClick={this.handleBtnClicked.bind(this)} />
+            <input type="button" value="Reset" className='resetButton button' onClick={this.handleReset} />
+            <input type="button" value="Apply" className='applyGramaButton button' onClick={this.handleApplyBtnClicked.bind(this)} />
+         
+          </div>
 
+          {/* 
           <label className='labels'>
             NIC:
             <input type="text" className='nicTxtBox' value={this.state.gramaApplicant.nic} onChange={this.handleNicChanged.bind(this)} />
           </label>
 
           <br />
-          <label className='validationtxt'>{this.state.nicValidation}</label>
+          
 
           <br />
 
-          <label className='labels'>
-            Address:
-            <textarea className='addressTxtBox' value={this.state.gramaApplicant.address} onChange={this.handleAddressChanged.bind(this)} />
-          </label>
+          
 
           <br />
-          <label className='validationtxt'>{this.state.addressValidation}</label>
+          
 
-          <br />
+          <br /> */}
 
           {/* <label >
           Proof of Residence:
           <input type="file" className='filebox'/>
         </label> */}
 
-          <br />
 
-          <div className='btnPanel'>
-            <input type="button" value="Verify" className='verifyBtn btn' onClick={this.handleBtnClicked.bind(this)} />
-            <input type="button" value="Reset" className='resetBtn btn' onClick={this.handleReset} />
+
+          {/* <div className='btnPanel'>
+            
           </div>
 
-          <br />
+         
 
           <div className='applySection'>
-            <input type="button" value="Apply" className='applyGramaBtn btn' onClick={this.handleApplyBtnClicked.bind(this)} />
-          </div>
+             </div> */}
 
         </form>
       </div>
