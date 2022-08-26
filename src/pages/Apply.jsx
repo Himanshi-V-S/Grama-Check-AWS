@@ -1,17 +1,25 @@
 import React from 'react'
 import '../css/Apply.css'
-import {useState} from 'react';
+import Header from "../components/Header"
+import { useState } from 'react';
+import Footer from "../components/Footer"
 
 const Apply = () => {
-    return (
+  return (
     <div>
-        <div className='formHeading'>
-            Grama certificate application form
-        </div>
+      <div className='header'>
+        <Header />
+      </div>
+      <div className='formHeading'>
+        Grama Certificate Application Form
+      </div>
 
-        <div className='formbody'>
-          <Form/>
-        </div>
+      <div className='formbody'>
+        <Form />
+      </div>
+      <div className='footer'>
+        <Footer />
+      </div>
 
     </div>
   )
@@ -25,112 +33,187 @@ class Form extends React.Component {
       gramaApplicant: {
         nic: props.nic,
         address: props.address
-      }
+      },
+
+      nicValidation: props.nicValidation,
+      addressValidation: props.addressValidation,
+
     }
   }
 
   handleNicChanged(event) {
     // Extract the current value of the gramaApplicant from state
     var gramaApplicant = this.state.gramaApplicant;
-  
+
     // Extract the value of the input element represented by `target`
     var modifiedValue = event.target.value;
-  
+
     // Update the gramaApplicant object's  nic
     gramaApplicant.nic = modifiedValue;
-  
-  
+
     // Update the state object
     this.setState({
       gramaApplicant: gramaApplicant
     });
-  }  
+  }
 
   handleAddressChanged(event) {
     // Extract the current value of the gramaApplicant from state
     var gramaApplicant = this.state.gramaApplicant;
-  
+
     // Extract the value of the input element represented by `target`
     var modifiedValue = event.target.value;
-  
+
     // Update the gramaApplicant object's  address
     gramaApplicant.address = modifiedValue;
-  
-  
+
+
     // Update the state object
     this.setState({
       gramaApplicant: gramaApplicant
     });
-  }  
+  }
 
 
-  handleBtnClicked(){
+  handleBtnClicked() {
     console.log(this.state.gramaApplicant);
 
     var nic = this.state.gramaApplicant.nic;
     var address = this.state.gramaApplicant.address;
 
-    invokeIdentityApi(nic);
+    this.invokeIdentityApi(nic);
+    this.invokeAddressCheckApi(nic, address);
+  }
+
+  handleApplyBtnClicked() {
+
+  }
+
+
+  invokeIdentityApi(nic) {
+    // var testNic = '970852414V';
+
+    const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/applicantinfo?nic=" + nic + "&client_id=ASI3DoYAWS6HCEiZypwYt3StLwUnFs366Ga5Jvfm";
+
+    fetch(requestURL)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log(data.status);
+
+        this.setState({
+          nicValidation: data.status
+        });
+      })
+
+  }
+
+  invokeAddressCheckApi(nic, address) {
+    // var testNic = '970852414V';
+    // var testAddress = 'No 12, nawala road, kotte';
+
+    const requestURL = "https://tnk36i6qb1.execute-api.us-east-1.amazonaws.com/addresscheckStage/addresscheck?nic=" + nic + "&address=" + address + "&client_id=JZbsreUvgdagqagyrv10i6blT27DacpW2PLeGuA0";
+
+    fetch(requestURL)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        console.log(data.status);
+
+        this.setState({
+          addressValidation: data.status
+        });
+
+      })
+
+  }
+  handleReset = e => {
+    this.setState({
+      gramaApplicant: {
+        nic: "",
+        address: ""
+      },
+      nicValidation: "",
+      addressValidation: ""
+    })
   }
 
   render() {
     return (
-      <form>
-        <label>
-          NIC:
-          <input type="text" className='nicTxtBox' value={this.state.gramaApplicant.nic} onChange={this.handleNicChanged.bind(this)}/>
-        </label>
+      <div className='gramaApplyFormContainer'>
+        <form className='gramaApplyForm'>
+          <div className='firstRaw'>
+            <div className='nicLabelDiv'>
+              <label className='nicLabel'>
+                NIC:
+              </label>
+            </div>
+            <div className='nicTextDiv'>
+              <input className='nicInput' type="text" value={this.state.gramaApplicant.nic} onChange={this.handleNicChanged.bind(this)} />
+              
+            </div>
+          </div>
+          <label className='validationtxt'>{this.state.nicValidation}</label>
+          <div className='secondRaw'>
+            <div className='addressLabelDiv'>
+              <label className='addressLabel'>
+                Address:
+              </label>
+            </div>
+            <div className='addressInputDiv'>
+              <input className='addressInput' value={this.state.gramaApplicant.address} onChange={this.handleAddressChanged.bind(this)} />
+            </div>
+          </div>
+          <label className='validationtxt'>{this.state.addressValidation}</label>
+          <div className='thirdRaw'>
+          <input type="button" value="Verify" className='verifyButton button' onClick={this.handleBtnClicked.bind(this)} />
+            <input type="button" value="Reset" className='resetButton button' onClick={this.handleReset} />
+            <input type="button" value="Apply" className='applyGramaButton button' onClick={this.handleApplyBtnClicked.bind(this)} />
+         
+          </div>
 
-        <br/>
+          {/* 
+          <label className='labels'>
+            NIC:
+            <input type="text" className='nicTxtBox' value={this.state.gramaApplicant.nic} onChange={this.handleNicChanged.bind(this)} />
+          </label>
 
-        <label>
-          Address:
-          <textarea className='addressTxtBox' value={this.state.gramaApplicant.address} onChange={this.handleAddressChanged.bind(this)}/>
-        </label>
+          <br />
+          
 
-        <br/>
+          <br />
 
-        <label >
+          
+
+          <br />
+          
+
+          <br /> */}
+
+          {/* <label >
           Proof of Residence:
           <input type="file" className='filebox'/>
-        </label>
+        </label> */}
 
-        <br/>
 
-        <div className='btnPanel'>
-          {/* Create and add a function when apply btn is clicked  */}
-          <input type="button" value="Apply" className='applyBtn btn' onClick={this.handleBtnClicked.bind(this)}/>  
-          <input type="reset" value="Reset" className='resetBtn btn'/>
-        </div>
-    
+
+          {/* <div className='btnPanel'>
+            
+          </div>
+
+         
+
+          <div className='applySection'>
+             </div> */}
+
         </form>
+      </div>
+
     );
   }
- }
+}
 
 
- function invokeIdentityApi(nic) {
-  // const testNic = '12345678V';
 
-  const testNic = nic;
-
-  console.log("test:", nic);
-
-  require('dotenv').config()
-  console.log(process.env);
-
-  const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/submittedinfo?nic=testNic&client_id=process.env.IDENTITY_API";
-
-  fetch(requestURL)
-  .then((response) => {
-    console.log(response);
-    // const myObj = JSON.parse(response.json);
-    // console.log(myObj.message);
-  })
-  .catch((error) => {
-    console.log(error);
-  })
-  // .then( response => response.json())
- }
 
 export default Apply

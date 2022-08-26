@@ -1,20 +1,48 @@
 *{
-    margin-top: 4px;
+    margin-top: 0px;
 }
-
+.navBar{
+    width: 100%;
+    height: 7vh;
+    
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    margin-bottom: 0%;
+}
+.navBarLogo{
+    padding-top: 3vh
+}
+.naveBarButtons{
+    padding-top: 3vh;
+    padding-right: 5%;
+}
 .appName{
-    margin-left: 40px;
-    font-size: 30px;
+    margin-left: 4%;
+    height: 7vh;
+    width: 130px;
+    
 }
-
-.userIcon{
-    margin-left: 1500px;
-    width: 30px;
-    height: 30px;
+.navButton{
+    background-color: white;
+    color: #0075dc;
+    /* background-color: black;
+    color: white; */
+    width: 9vw;
+    min-width: 80px;
+    height: 6.5vh;
+    font-size: 25px;
+    font-weight: bold;
+    border: #4992FF;
+    border-radius: 50px;
+    margin-left:40vw;
+    margin-top: 0%;
 }
-
-.notifyIcon{
-    margin-left: 30px;
-    width: 32px;
-    height: 32px;
+.navButton:hover{
+    background-color: rgb(242, 242, 242);
+    color: #209ffa;
+}
+@media (max-width:700px){
+    .navButton{
+        /* margin-left: 25vw; */
+    }
 }

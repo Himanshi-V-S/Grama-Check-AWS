@@ -1,19 +1,25 @@
 *{
-    background-color: #E2FDFF;
+    background-color: #5ca0e3;
 }
 
 .mainHeading{
     text-align: center;
-    margin-top: 100px;
-    font-size: 80px;
-}
-
-.menu{
-    margin-top: 150px;
-    text-align: center;
+    margin-top: 2%;
+    padding-top: 3%;
+    font-size: calc(1rem + 3vw);
     
 }
 
+.menu{
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+    width: 40%;
+    height: 45vh;
+    margin-left: 30%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+/* 
 .btn{
     border-radius: 10px;
     padding: 20px;
@@ -21,10 +27,21 @@
     color: white;
     font-size: 18px;
     
-}
+} */
 
 .gramabtn{
+    
     background-color: #51B6FF;
+    color: white;
+    width: 80%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: calc(1rem + 0.4vw);
+    font-weight: bold;
+    border: #4992FF;
+    border-radius: 15px;
+    margin-left:0%;
+    margin-top: 7%;
 }
 
 .gramabtn:hover{
@@ -32,17 +49,38 @@
 }
 
 .policebtn{
-    background-color: #0c47ad;
-    margin-top: 15px;
+    background-color: #51B6FF;
+    color: white;
+    width: 80%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: calc(1rem + 0.4vw);
+    font-weight: bold;
+    border: #4992FF;
+    border-radius: 15px;
+    margin-left:0%;
+    margin-top: 5%;
 }
 
 .policebtn:hover{
     background-color: #216beb;
 }
-
+.divider{
+    margin-top: 6%;
+    width: 90%;
+}
 .statusbtn{
-    background-color: #A4B2C7;
-    margin-top: 25px;
+    background-color: #51B6FF;
+    color: white;
+    width: 80%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    font-size: calc(1rem + 0.4vw);
+    font-weight: bold;
+    border: #4992FF;
+    border-radius: 15px;
+    margin-left:0%;
+    margin-top: 4%;
 }
 
 .statusbtn:hover{
@@ -56,7 +94,27 @@
     background-color: #ffe6e6;
     padding-top: 50px;
     padding-bottom: 50px;
+    width: 100%;
+    margin-right: 0%;
+    
 }
 
 
 
+@media (max-width:900px){
+    .menu{
+        border-radius: 20px;
+        text-align: center;
+        background-color: white;
+        width: 70%;
+        height: 40vh;
+        margin-left: 15%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .mainHeading{
+        margin-top: 8%;
+        font-size: calc(1rem + 1.3vw);
+        padding-top: 5%;
+        
+    }
+}

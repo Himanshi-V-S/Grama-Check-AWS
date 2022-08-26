@@ -9,51 +9,137 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
-
-.nicTxtBox{
-    margin-left: 160px;
-    padding: 10px;
-    width: 350px;
-    font-size: 16px;
+.policeApplyForm{
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 8%;
+    display: grid;
+    grid-template: 1fr 1fr 2fr / 1fr;
+    margin-bottom: 8%;
 }
-
+.policeFirstRaw{
+    background-color: white;
+    display: grid;
+    grid-template: 1fr/ 1fr 2fr;
+}
+.policeNicLabelDiv{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.policeNicLabel{
+    background-color: white;
+}
+.policeNicInputDiv{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.policeNicInput{
+    width: 70%;
+    background-color: white;
+    border: solid 1px black;
+}
+.policeSecondRaw{
+    background-color: white;
+    display: grid;
+    grid-template: 1fr/ 1fr 2fr; 
+}
+.policeCriminalLabelDiv{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.policeCriminalLabel{
+    background-color: white;
+}
+.policeCriminalOutputDiv{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .filebox{
-    margin-top: 20px;
-    margin-left: 60px;
-    border: 1px solid grey;
-    width: 350px;
-    height: 100px;
+   
+    border: none;
+    width: 70%;
     text-align: center;
     padding: 10px;
+    background-color: white;
+}
+.policeThirdRaw{
+    padding-top: 5%;
+    padding-bottom: 3%;
+    background-color: white;
+    display:grid;
+    grid-template: 1fr/ 1fr 1fr 1fr;
+}
+.validationtxt{
+    justify-content: center;
+    font-size: 12px;
+    color: red;
+    margin-left: 35%;
 }
 
-.btnPanel{
-    margin-top: 20px;
-    width: 100%;
+
+.button{
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
 }
 
-.btn{
-    padding: 10px;
-    font-size: 14px;
-    width: 40%;
-}
-
-.applyBtn{
+.verifyButton{
     background-color: #51B6FF;
+    border: white;
+    border-radius: 10px;
+    max-height: 50px;
 }
 
-.applyBtn:hover{
+.verifyButton:hover{
     background-color: #209ffa;
 }
 
-.resetBtn{
-    margin-left: 15px;
+.resetButton{
+    max-height: 50px;
     background-color: #A4B2C7;
-    margin-top: 15px;
+    border: white;
+    border-radius: 10px;
 }
 
-.resetBtn:hover{
+.resetButton:hover{
     background-color: #768499;
 }
+.applyPRBtn{
+    background-color: #2337ad;
+    color: white;
+    border-radius: 10px;
+    max-height: 50px;
+}
 
+.applyPRBtn:hover{
+    background-color: #384dc9;
+}
+
+.policeApplyFormContainer{
+    background-color: white;
+    width: 70%;
+    
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.criminalStatus{
+    width: 200px;
+    height:5vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
