@@ -32,7 +32,7 @@ function Main() {
             <Header/>
           </div>
         <Heading/>
-
+        
         <div className='menu'>
             <button className='gramabtn' onClick={routeToApply}>Apply for Grama Certificate</button>
             <br/>

@@ -93,8 +93,10 @@ class Form extends React.Component {
   invokeIdentityApi(nic) {
     // var testNic = '970852414V';
 
-    const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/applicantinfo?nic=" + nic + "&client_id=ASI3DoYAWS6HCEiZypwYt3StLwUnFs366Ga5Jvfm";
+    //const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/applicantinfo?nic=" + nic + "&client_id=ASI3DoYAWS6HCEiZypwYt3StLwUnFs366Ga5Jvfm";
 
+    const requestURL = "https://ppbz12ezl9.execute-api.us-east-1.amazonaws.com/default/info?nic=" + nic
+    
     fetch(requestURL)
       .then((response) => response.json())
       .then((data) => {
@@ -112,8 +114,10 @@ class Form extends React.Component {
     // var testNic = '970852414V';
     // var testAddress = 'No 12, nawala road, kotte';
 
-    const requestURL = "https://tnk36i6qb1.execute-api.us-east-1.amazonaws.com/addresscheckStage/addresscheck?nic=" + nic + "&address=" + address + "&client_id=JZbsreUvgdagqagyrv10i6blT27DacpW2PLeGuA0";
+    //const requestURL = "https://tnk36i6qb1.execute-api.us-east-1.amazonaws.com/addresscheckStage/addresscheck?nic=" + nic + "&address=" + address + "&client_id=JZbsreUvgdagqagyrv10i6blT27DacpW2PLeGuA0";
 
+    const requestURL = "https://0r0cdb7lsg.execute-api.us-east-1.amazonaws.com/default/info?address=" + address
+ 
     fetch(requestURL)
       .then((response) => response.json())
       .then((data) => {
