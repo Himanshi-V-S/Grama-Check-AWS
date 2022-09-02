@@ -36,10 +36,11 @@ function Main() {
         <div className='menu'>
             <button className='gramabtn' onClick={routeToApply}>Apply for Grama Certificate</button>
             <br/>
+            <hr className='divider'/>
             <button className='policebtn' onClick={routeToPoliceReport}>Apply for Police Clearance Report</button>
             <br/>
-            <hr className='divider'/>
-            <button className='statusbtn' onClick={showStatus}>Check Status</button>
+            
+            {/* <button className='statusbtn' onClick={showStatus}>Check Status</button> */}
         </div>
 
         {

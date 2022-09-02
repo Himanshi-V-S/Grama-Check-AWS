@@ -74,7 +74,10 @@ class Form extends React.Component {
 
     //const requestURL = "https://repu51rywd.execute-api.us-east-1.amazonaws.com/prod/check?nic=" + nic + "&client_id=K3BShTFHYa4AFUNI9Abna7a5S6bXWW2352OdXflI";
 
-    const requestURL = "https://nrelaqz9e3.execute-api.us-east-1.amazonaws.com/default/info?nic=" + nic
+    // const requestURL = "https://nrelaqz9e3.execute-api.us-east-1.amazonaws.com/default/info?nic=" + nic
+   
+    const requestURL = "https://xx635j0jgd.execute-api.us-east-1.amazonaws.com/dev/policecheck?nic=" + nic + "&client_id=PJznle1ZG27UzZdrWJ9RH58B8EwTdaZZ387DH23s";
+
 
     fetch(requestURL)
       .then((response) => response.json())

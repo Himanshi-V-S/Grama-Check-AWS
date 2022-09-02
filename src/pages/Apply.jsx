@@ -95,8 +95,10 @@ class Form extends React.Component {
 
     //const requestURL = "https://3m8ljy3y4h.execute-api.us-east-1.amazonaws.com/dev/applicantinfo?nic=" + nic + "&client_id=ASI3DoYAWS6HCEiZypwYt3StLwUnFs366Ga5Jvfm";
 
-    const requestURL = "https://ppbz12ezl9.execute-api.us-east-1.amazonaws.com/default/info?nic=" + nic
+    // const requestURL = "https://ppbz12ezl9.execute-api.us-east-1.amazonaws.com/default/info?nic=" + nic
     
+    const requestURL = "https://ffg4ftom8d.execute-api.us-east-1.amazonaws.com/dev/userinfo?nic=" + nic + "&client_id=BFoefPRbym4ZfVfDKlsU75p2hfNM7tEQ15FutJtN";
+
     fetch(requestURL)
       .then((response) => response.json())
       .then((data) => {
@@ -116,8 +118,9 @@ class Form extends React.Component {
 
     //const requestURL = "https://tnk36i6qb1.execute-api.us-east-1.amazonaws.com/addresscheckStage/addresscheck?nic=" + nic + "&address=" + address + "&client_id=JZbsreUvgdagqagyrv10i6blT27DacpW2PLeGuA0";
 
-    const requestURL = "https://0r0cdb7lsg.execute-api.us-east-1.amazonaws.com/default/info?address=" + address
- 
+    // const requestURL = "https://0r0cdb7lsg.execute-api.us-east-1.amazonaws.com/default/info?address=" + address
+    const requestURL = "https://gft18uzzqh.execute-api.us-east-1.amazonaws.com/addresscheck/addresscheck?nic=" + nic + "&address=" + address + "&client_id=KyUDe9O5x89fhLpws7ZCo1ux3YyD6ojV9uAwLeu8";
+    
     fetch(requestURL)
       .then((response) => response.json())
       .then((data) => {
